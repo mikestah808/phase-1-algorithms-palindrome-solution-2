@@ -1,9 +1,56 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // iterate from the beginning to the middle of the word
+  for(let i = 0; i < word.length / 2; i++){
+    // check each letter to the corresponding letter from the end 
+    const j = word.length - 1 - i
+    const startChar = word[i]
+    const endChar = word[j]
+    // if any of the letters don't match, return false 
+    if(startChar !== endChar) return false;
+  }
+  // return true
+  return true; 
 }
-
+  // isPalindrome()
 /* 
+
+r a c e c a r
+0 1 2 3 4 5 6 
+i           j
+
+r a c e c a r
+0 1 2 3 4 5 6 
+  i       j
+
+r a c e c a r
+0 1 2 3 4 5 6 
+    i   j
+
+r a c e c a r
+0 1 2 3 4 5 6 
+      i j
+
+
+
+
+
   Add your pseudocode here
+  function that returns true if a word is a palindrome. 
+  That means if 
+  the first letter is the same as the last letter, and the second letter is the same 
+  as the second to last letter, and so on, until we reach the middle, return true. 
+
+  abba = true 
+  ^  ^
+
+  robot = false
+  ^   ^
+
+  iterate from the beginning to the middle of the word
+  check each letter to the corresponding letter from the end 
+  if any of the letters don't match, return false 
+  
+  return true
 */
 
 /*
